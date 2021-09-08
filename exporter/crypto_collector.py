@@ -117,7 +117,7 @@ class CryptoCollector():
                         accounts[currency].get(account_type,)
                         and not (accounts[currency].get(account_type, 0) == 0)
                 ):
-                    for reference_currency in ("USD", "EUR", currency):
+                    for reference_currency in ("USD", "USDT", "EUR", currency):
                         value = accounts[currency][account_type]
                         pair = "{}/{}".format(currency, reference_currency)
 
