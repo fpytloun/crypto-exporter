@@ -77,6 +77,9 @@ if __name__ == '__main__':
         elif exchange == 'stellar':
             from .connectors.stellar_connector import StellarConnector
             connector = StellarConnector()
+        elif exchange == 'decred':
+            from .connectors.decred_connector import DecredConnector
+            connector = DecredConnector()
         else:
             from .connectors.ccxt_connector import CcxtConnector
             connector = CcxtConnector(exchange=exchange)
