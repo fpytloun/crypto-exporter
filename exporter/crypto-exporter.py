@@ -80,6 +80,9 @@ if __name__ == '__main__':
         elif exchange == 'decred':
             from .connectors.decred_connector import DecredConnector
             connector = DecredConnector()
+        elif exchange == 'zchain':
+            from .connectors.zchain_connector import ZchainConnector
+            connector = ZchainConnector()
         else:
             from .connectors.ccxt_connector import CcxtConnector
             connector = CcxtConnector(exchange=exchange)
